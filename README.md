@@ -1,4 +1,4 @@
-# 💡 LUMINEST AFRICA — Monorepo
+# 💡 LUMINEST AFRICA
 
 > **Know your light. Own your bill.**
 > Nigeria's first household electricity tracking web app.
