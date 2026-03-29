@@ -7,7 +7,7 @@ const router = Router()
 
 router.use(protect)
 
-router.post('/',              setBudget)
-router.get('/:monthYear',     getBudget)
+router.post('/', setBudget)
+router.get('/:monthYear', getBudget)
 
 export default router
