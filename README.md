@@ -8,33 +8,8 @@
 ## Project Structure
 
 ```
-luminest-africa/                     ← Monorepo root
-├── package.json                     ← Workspace root (concurrently)
-├── .env.example                     ← Shared env reference
-├── .gitignore
-│
-├── frontend/                        ← Next.js 14 + TypeScript
-│   ├── package.json
-│   ├── tsconfig.json
-│   ├── next.config.js               ← Proxies /api/* → backend :5000
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   ├── .env.example
-│   │
-│   ├── app/
-│   │   ├── globals.css              ← Design tokens + global styles
-│   │   ├── layout.tsx               ← Root layout (fonts, metadata)
-│   │   └── page.tsx                 ← GTM Plan interactive dashboard
-│   │
-│   ├── data/
-│   │   └── gtm-data.ts              ← All GTM plan content (11 sections)
-│   │
-│   ├── lib/
-│   │   └── api.ts                   ← Axios client for all backend calls
-│   │
-│   └── types/
-│       └── index.ts                 ← Shared TypeScript types (frontend)
-│
+luminest-africa/        
+├                                    ← Proxies /api/* → backend :5000
 └── backend/                         ← Express 4 + TypeScript + MongoDB
     ├── package.json
     ├── tsconfig.json
@@ -93,10 +68,6 @@ npm install
 # Backend
 cp backend/.env.example backend/.env
 # Edit backend/.env — add MONGODB_URI, JWT_SECRET, PAYSTACK_SECRET_KEY
-
-# Frontend
-cp frontend/.env.example frontend/.env.local
-# Edit frontend/.env.local — add NEXT_PUBLIC_API_URL, NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY
 ```
 
 ### 3. Run both servers together
